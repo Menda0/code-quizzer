@@ -1,0 +1,86 @@
+<h2>Anwsers</h2>
+
+<div ng-if="currentQuestion.type == 'single'">
+    <div class="form-check" ng-repeat="option in currentQuestion.options">
+        <input class="form-check-input" type="radio" name="{{currentQuestion.id}}" id="{{option.id}}" value="{{option.id}}" ng-model="currentQuestion.answer">
+        <label class="form-check-label" for="{{option.id}}"
+               ng-class="{
+               'text-success':currentQuestion.isEvaluated && currentQuestion.correct.includes(option.id),
+               'text-danger':currentQuestion.isEvaluated && currentQuestion.wrong.includes(option.id)
+               }"
+               ng-bind-html="option.description"
+        >
+        </label>
+        <p
+            ng-if="option.explanation && currentQuestion.isEvaluated"
+            ng-class="{
+               'text-success':currentQuestion.isEvaluated && currentQuestion.correct.includes(option.id),
+               'text-danger':currentQuestion.isEvaluated && currentQuestion.wrong.includes(option.id)
+           }"
+            ng-bind-html="option.explanation"
+        >
+        </p>
+    </div>
+</div>
+
+<div ng-if="currentQuestion.type == 'multiple'">
+    <div class="form-check" ng-repeat="option in currentQuestion.options">
+        <input class="form-check-input"
+               type="checkbox"
+               name="{{currentQuestion.id}}"
+               id="{{option.id}}"
+               checklist-model="currentQuestion.answer"
+               checklist-value="option.id">
+        <label class="form-check-label" for="{{option.id}}"
+               ng-class="{
+               'text-success':currentQuestion.isEvaluated && currentQuestion.correct.includes(option.id),
+               'text-danger':currentQuestion.isEvaluated && currentQuestion.wrong.includes(option.id)
+               }"
+               ng-bind-html="option.description"
+        >
+        </label>
+        <p
+            ng-if="option.explanation && currentQuestion.isEvaluated"
+            ng-class="{
+               'text-success':currentQuestion.isEvaluated && currentQuestion.correct.includes(option.id),
+               'text-danger':currentQuestion.isEvaluated && currentQuestion.wrong.includes(option.id)
+           }"
+            ng-bind-html="option.explanation"
+        >
+        </p>
+    </div>
+</div>
+
+<!--<div class="form-check">-->
+    <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+    <!--<label class="form-check-label" for="exampleRadios1">-->
+        <!--expr1-->
+    <!--</label>-->
+<!--</div>-->
+<!--<div class="form-check">-->
+    <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+    <!--<label class="form-check-label" for="exampleRadios1">-->
+        <!--expr2-->
+    <!--</label>-->
+<!--</div>-->
+<!--<div class="form-check">-->
+    <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+    <!--<label class="form-check-label" for="exampleRadios1">-->
+        <!--expr3-->
+    <!--</label>-->
+<!--</div>-->
+<!--<div class="form-check">-->
+    <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+    <!--<label class="form-check-label text-danger" for="exampleRadios1">-->
+        <!--expr4-->
+    <!--</label>-->
+<!--</div>-->
+<!--<div class="form-check">-->
+    <!--<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+    <!--<label class="form-check-label text-success" for="exampleRadios1">-->
+        <!--None of them-->
+    <!--</label>-->
+<!--</div>-->
+<!--<p class="text-success">-->
+    <!--Correct-->
+<!--</p>-->

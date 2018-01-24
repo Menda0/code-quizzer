@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="Educa">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="node_modules/code-prettify/styles/" >-->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" >
+
+        <link rel="stylesheet" href="style.css" >
+
+        <title>Educa</title>
+    </head>
+    <body ng-controller="EducaController" ng-init="init()"  >
+
+        <div class="container-fluid background-default">
+            <div ng-include="'navbar.html'" ng-show="examInfo.totalQuestions > 0"></div>
+
+            <div class="row fill" ng-show="examInfo.totalQuestions > 0">
+                <div class="col-sm-12 col-md-7 padding-default border-left-default fill" ng-include="'code-question.html'"></div>
+                <div class="col-sm-12 col-md-5 padding-default border-left-default fill" ng-include="'answers.html'"></div>
+            </div>
+        </div>
+
+        <div ng-include="'info.html'" ng-show="examInfo.totalQuestions > 0"></div>
+
+        <footer class="footer" ng-include="'footer.html'" ng-show="examInfo.totalQuestions > 0"></footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script src="node_modules/code-prettify/src/run_prettify.js"></script>
+
+        <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="node_modules/angular-lazy-img/dist/angular-lazy-img.min.js"></script>
+        <script src="node_modules/checklist-model/checklist-model.js"></script>
+        <script src="node_modules/betsol-ng-time-counter/dist/scripts/betsol-ng-time-counter.min.js"></script>
+        <script src="node_modules/moment/min/moment.min.js"></script>
+
+        <script src="node_modules/google-spreadsheets-i18n-angular/src/google-spreadsheets-i18n-angular.js"></script>
+
+        <script src="app.js"></script>
+    </body>
+</html>

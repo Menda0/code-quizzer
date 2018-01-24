@@ -1,0 +1,8 @@
+<h2>Question</h2>
+<p ng-bind-html="currentQuestion.question"></p>
+
+<div ng-if="currentQuestion.code">
+    <h2>Code</h2>
+    <pre class="prettyprint" ng-bind-html="currentQuestion.code">
+    </pre>
+</div>

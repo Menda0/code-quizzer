@@ -1,0 +1,18 @@
+{
+  "name": "educa",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {},
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "angular": "1.6.8",
+    "angular-sanitize": "1.6.8",
+    "angular-lazy-img":"1.2.0",
+    "checklist-model":"0.11.0",
+    "betsol-ng-time-counter":"1.1.1",
+    "moment": "2.20.1",
+    "google-spreadsheets-i18n-angular":"1.0.0",
+    "sweetalert":"2.1.0",
+    "code-prettify":"0.1.0"
+  }
+}

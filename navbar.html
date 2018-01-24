@@ -1,0 +1,51 @@
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h4 class="text-white">Exame code</h4>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input ng-model="examUrl" type="examUrl" class="form-control" id="examUrl" placeholder="Insert here the exam code">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-outline-secondary" type="button" ng-click="getExamQuestions(examUrl)">
+                            <span >Load</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <span class="text-muted">You can find this code on the link of the sheet containing the exam data. Please unsure that the sheet is public shared via url. Ex:1_ESXNZg2wqMyt5G1nFAlGQz2yPfwwogDK3-8cAwiMQA</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline">
+            <button class="btn btn-success" type="button" style="margin-right: 10px" ng-if="currentQuestion.isEvaluated && currentQuestion.isCorrect">Correct</button>
+            <button class="btn btn-danger" type="button" style="margin-right: 10px" ng-if="currentQuestion.isEvaluated && !currentQuestion.isCorrect">Incorrect</button>
+            <button class="btn btn-primary" type="button" style="margin-right: 10px"
+                    ng-if="currentQuestion.isEvaluated && currentQuestion.explanation" ng-click="toogleInfo()">
+                <span >Explanation</span>
+            </button>
+            <button class="btn btn-outline-light" type="button" style="margin-right: 10px" ng-click="evaluateQuestion(currentQuestion)">
+                <span >Evaluate</span>
+            </button>
+            <button class="btn btn-outline-secondary" type="button" style="margin-right: 10px"
+                    ng-disabled="examInfo.currentQuestion == '1'"
+                    ng-click="previowsQuestion()"
+            >
+                <span >Previous</span>
+            </button>
+            <button class="btn btn-outline-secondary" type="button"
+                    style="margin-right: 10px"
+                    ng-disabled="examInfo.currentQuestion == ''+examInfo.totalQuestions"
+                    ng-click="nextQuestion()"
+            >
+                <span >Next</span>
+            </button>
+            <button type="button" class="btn btn-success" ng-click="finish()">Finish</button>
+        </form>
+
+    </nav>
+</div>
