@@ -1,4 +1,4 @@
-<div class="alert alert-info explanation" role="alert" ng-show="infoOn">
+<div class="alert alert-info explanation" role="alert" ng-show="currentQuestion.explanation && infoOn && currentQuestion.isEvaluated">
     <h4 class="alert-heading">Explanation</h4>
     <p ng-bind-html="currentQuestion.explanation"></p>
 </div>
