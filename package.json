@@ -1,5 +1,5 @@
 {
-  "name": "educa",
+  "name": "code-quizzer",
   "version": "1.0.0",
   "private": false,
   "scripts": {},
@@ -13,6 +13,8 @@
     "moment": "2.20.1",
     "google-spreadsheets-i18n-angular":"1.0.0",
     "sweetalert":"2.1.0",
-    "code-prettify":"0.1.0"
+    "code-prettify":"0.1.0",
+    "connect": "3.6.5",
+    "serve-static": "1.13.1"
   }
 }
