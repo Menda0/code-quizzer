@@ -14,6 +14,9 @@ npm install && node server.js
 
 Now go to[http://localhost:8080](http://localhost:8080)
 
+## Simple Use / Demo
+Go to[http://codequizzer.betacode.tech](http://codequizzer.betacode.tech)
+
 
 ## Create Data Source
 Data sources are created using googlesheets.
