@@ -12,10 +12,10 @@ Run the following code:
 npm install && node server.js
 ```
 
-Now go to[http://localhost:8080](http://localhost:8080)
+Now go to [http://localhost:8080](http://localhost:8080)
 
 ## Simple Use / Demo
-Go to[http://codequizzer.betacode.tech](http://codequizzer.betacode.tech)
+Go to [http://codequizzer.betacode.tech](http://codequizzer.betacode.tech)
 
 
 ## Create Data Source
@@ -71,7 +71,7 @@ You have to published the sheet via url so the quizzer can work.
 ![Spreadsheet printscreen](https://raw.githubusercontent.com/Menda0/code-quizzer/master/print5.png)
 
 
-You can check this[link](https://docs.google.com/spreadsheets/d/1MTD1givsY2n2dZcFJ7oHImEX_ngmk60OGdja45onVZc/edit?usp=sharing)to see a real example of a working sheet.
+You can check this [link](https://docs.google.com/spreadsheets/d/1MTD1givsY2n2dZcFJ7oHImEX_ngmk60OGdja45onVZc/edit?usp=sharing)to see a real example of a working sheet.
 
 
 
