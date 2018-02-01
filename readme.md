@@ -2,7 +2,8 @@
 The objective of this project is to create a platform for build coding quizes for programming languages using google sheets as datasource.
 This can be useful in code certification sources.
 
-![Spreadsheet printscreen](https://raw.githubusercontent.com/Menda0/code-quizzer/master/buymecoffee.png)
+[![paypal](https://raw.githubusercontent.com/Menda0/code-quizzer/master/buymecoffee.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9UN7YK72L3ME6)
+
 
 
 ## Install and Run
